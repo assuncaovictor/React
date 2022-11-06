@@ -1,0 +1,24 @@
+.name,
+.email {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #292929;
+    margin: 0;
+}
+
+.email {
+    font-style: italic;
+}
+
+.avatar {
+    aspect-ratio: 1 / 1;
+    width: 5rem;
+    border-radius: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}

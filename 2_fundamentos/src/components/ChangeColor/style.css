@@ -1,0 +1,12 @@
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+button {
+    border: none;
+    min-width: 75px;
+    height: 40px;
+    border-radius: 0.3725rem;
+}
