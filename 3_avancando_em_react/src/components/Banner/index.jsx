@@ -1,5 +1,5 @@
 import "./style.css";
-import night from "../../../../assets/img/night.png";
+import night from "../../assets/img/night.png";
 import React from "react";
 
 const Banner = ({ theme }) => {
