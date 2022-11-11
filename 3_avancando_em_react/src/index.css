@@ -10,3 +10,41 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark p,
+.dark span {
+    color: rgb(207, 207, 207);
+}
+
+.dark {
+    background-color: #1e1e1e;
+}
+
+.dark button {
+    background-color: #3f3fc2 !important;
+    color: #fefefe !important;
+}
+
+button {
+    border: none;
+    padding: 6px 1rem;
+    border-radius: 6px;
+    background-color: #303031;
+    color: white;
+}
+
+.theme {
+    position: fixed;
+    top: 3rem;
+    right: 3rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 99999px;
+    box-shadow: 5px 5px 10px #000;
+    width: 75px;
+}

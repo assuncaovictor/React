@@ -14,7 +14,7 @@ const Banner = () => {
     };
 
     return (
-        <section id="citys">
+        <section id="citys" style={{ width: "100%" }}>
             <h2>Cidades mais populosas do Japão </h2>
 
             <ol>
@@ -24,7 +24,7 @@ const Banner = () => {
                     ) => (
                         // key é a chave única que ajuda o react a renderizar o componente com map
                         <li key={id}>
-                            <h3 style={{ display: "inline-block" }}>{name}</h3>: {population}
+                            <h3 style={{ display: "inline-block" }}>{name}</h3>: <span>{population}</span>
                         </li>
                     )
                 )}
