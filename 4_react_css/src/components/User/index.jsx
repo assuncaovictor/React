@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./User.module.css";
+import styles from "./User.module.css"; // css modules 
 
 const user = ({ name, avatar, email }) => {
     return (

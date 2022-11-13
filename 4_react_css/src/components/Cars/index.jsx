@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Car.module.css";
+import styles from "./Car.module.css"; // css modules
 
 const Cars = ({ cars }) => {
     return (
