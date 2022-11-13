@@ -1,0 +1,15 @@
+/* O css aplicado ao arquivo também é válido para outras partes da aplicação */
+
+.title {
+    font-size: 2rem;
+    color: #1e1e1e;
+    text-align: center;
+}
+
+.title-red {
+    color: #c72020;
+}
+
+.title-green {
+    color: #47c720;
+}

@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 2rem;
+    align-items: center;
+}
+
+.img-profile {
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+    width: 75px;
+}
+
+.data-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-left: 1px solid #414141;
+    padding-left: 1rem;
+}
+
+.data {
+    font: 1.25rem;
+    font-weight: 500;
+}
+
+.info {
+    font-size: 0.8725rem;
+    font-weight: 700;
+}
