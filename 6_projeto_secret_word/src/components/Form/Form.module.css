@@ -1,0 +1,30 @@
+.form {
+    color: rgb(197, 197, 197);
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    gap: 2rem;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.form form {
+    align-items: stretch;
+    display: flex;
+    gap: 1rem;
+    margin: 0 auto;
+}
+
+.form input {
+    aspect-ratio: 1 / 1;
+    width: 50px;
+}
+
+.form button {
+    background-color: blue;
+    border: 0;
+    border-radius: 6px;
+    color: #fefefe;
+    padding: 0 1rem;
+}

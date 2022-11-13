@@ -1,0 +1,37 @@
+.letter {
+    align-items: center;
+    background-color: #e0e0e0;
+    border: 2px solid black;
+    color: #000;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.tip {
+    color: #bebebe;
+    align-items: baseline;
+    display: flex;
+    font-size: 1rem;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.tip > h2 {
+    color: #f5f546;
+    font-weight: bold;
+    font-size: 1.5rem;
+}

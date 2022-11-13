@@ -1,0 +1,41 @@
+.app {
+    background-color: #0e0e0e;
+    min-height: 100vh;
+    min-width: 100vw;
+    padding: 1rem;
+}
+
+.score {
+    position: fixed;
+    left: 2rem;
+    bottom: 2rem;
+}
+
+.score > span {
+    color: #ebeb39;
+    font-weight: bold;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+li {
+    color: #e0e0e0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
