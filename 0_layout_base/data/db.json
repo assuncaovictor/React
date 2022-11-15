@@ -1,0 +1,19 @@
+{
+    "products": [
+        {
+            "id": 4,
+            "name": "Meia Lacoste",
+            "price": 29.99
+        },
+        {
+            "name": "Tênis Puma",
+            "price": "299.99",
+            "id": 7
+        },
+        {
+            "name": "Camisa Brasil",
+            "price": "390.99",
+            "id": 11
+        }
+    ]
+}
