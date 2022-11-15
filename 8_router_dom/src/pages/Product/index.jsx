@@ -1,12 +1,12 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import { read } from "./hooks/api";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 // import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 const Product = () => {
     const { id } = useParams();
-    const { isLoading, data } = useQuery({ queryKey: ["products"], queryFn: () => read(id) });
+    const { isLoading, data } = useQuery({ queryKey: ["product"], queryFn: () => read(id) });
 
     // const queryClient = useQueryClient();
 
@@ -27,8 +27,9 @@ const Product = () => {
                 "Carregando..."
             ) : (
                 <div>
-                    <p>{data.id}</p>
+                    <p>{id}</p>
                     <p>R$ {data.price}</p>
+                    <Link to={`/products/${id}/info`}>Mais informações</Link>
                 </div>
             )}
         </div>

@@ -20,6 +20,8 @@ const Product = () => {
         onSettled: () => {
             queryClient.invalidateQueries("products");
         },
+        cacheTime: 600,
+        retry: true,
     });
 
     return (
@@ -42,7 +44,6 @@ const Product = () => {
                             <td>Carregando...</td>
                         </tr>
                     ) : (
-                        data &&
                         data.map(({ id, name, price }) => (
                             <tr key={id}>
                                 <td>

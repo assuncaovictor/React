@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import sidebar from "../../config/router/sidebar";
 import Style from "./Header.module.css";
 
@@ -10,9 +10,13 @@ const Header = () => {
                 <ul className={Style.list}>
                     {sidebar.map(({ path, name }) => (
                         <li key={name} className={Style.item}>
-                            <Link to={path} className={`${Style.link} ${window.location.pathname.includes(path) && Style.active}`}>
+                            <NavLink
+                                isActive={path}
+                                to={path}
+                                className={({ isActive }) => (isActive ? `${Style.active} ${Style.link}` : Style.link)}
+                            >
                                 {name}
-                            </Link>
+                            </NavLink>
                         </li>
                     ))}
                 </ul>

@@ -10,6 +10,7 @@ function App() {
         <QueryClientProvider client={queryClient}>
             <BrowserRouter>
                 <Body>
+                    
                     <Routes />
                 </Body>
             </BrowserRouter>
