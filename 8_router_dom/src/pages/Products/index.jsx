@@ -3,12 +3,18 @@ import { useQuery } from "@tanstack/react-query";
 import { read, del } from "./hooks/api";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import style from "./Products.module.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 const Product = () => {
+    const [searchParams] = useSearchParams();
+    console.log(searchParams);
     const navigate = useNavigate();
 
-    const { isLoading, data } = useQuery({ queryKey: ["products"], queryFn: read });
+    const { isLoading, data } = useQuery({
+        queryKey: ["products"],
+        queryFn: () => read(searchParams && "http://localhost:3000/products?" + searchParams),
+        cacheTime: 0,
+    });
 
     const queryClient = useQueryClient();
 

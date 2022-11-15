@@ -11,7 +11,7 @@ const Header = () => {
                     {sidebar.map(({ path, name }) => (
                         <li key={name} className={Style.item}>
                             <NavLink
-                                isActive={path}
+                                isactive={path}
                                 to={path}
                                 className={({ isActive }) => (isActive ? `${Style.active} ${Style.link}` : Style.link)}
                             >
