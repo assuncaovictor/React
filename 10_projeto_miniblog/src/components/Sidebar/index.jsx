@@ -1,16 +1,24 @@
 import { List, ListItemButton, ListItemIcon, ListItemText, ListItem, Drawer } from "./style";
 import React from "react";
-import sidebar from "../../config/router/sidebar/index";
+import { sidebar } from "../../config/router/navigate";
 import { NavLink } from "react-router-dom";
+import { usePageStyleContext } from "../../hooks/context";
 
-const Sidebar = ({ open, drawerWidth }) => {
+const Sidebar = () => {
+    const { drawerWidth, openDrawer, hasDrawer } = usePageStyleContext();
+
     return (
-        <Drawer sx={{ width: drawerWidth }} variant="persistent" anchor="left" open={open}>
+        <Drawer
+            sx={{ "& .MuiDrawer-paperAnchorLeft": { width: drawerWidth } }}
+            variant="persistent"
+            anchor="left"
+            open={openDrawer && hasDrawer}
+        >
             <List>
                 {sidebar.map((side, index) => {
                     const { route, icon, header } = side;
                     return (
-                        <ListItem key={route}>
+                        <ListItem key={route.path}>
                             <ListItemButton
                                 key={index + "_sidebar"}
                                 component={NavLink}

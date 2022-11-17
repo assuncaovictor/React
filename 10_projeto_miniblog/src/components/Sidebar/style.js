@@ -17,17 +17,13 @@ const ListItem = styled(MuiListItem)(() => ({
 const ListItemButton = styled(MuiListItemButton)(({ theme }) => ({
     minHeight: "3.5rem",
 
-    "&:hover": {
-        backgroundColor: alpha(theme.palette.primary.main, 0.15),
-    },
-
     "&.active": {
-        backgroundColor: alpha(theme.palette.primary.main, 0.2),
         color: theme.palette.primary.main,
+        backgroundColor: alpha(theme.palette.primary.main, 0.05),
         transition: "color 225ms ease-out",
 
         "& .MuiListItemText-primary": {
-            fontWeight: 600,
+            fontWeight: 500,
         },
 
         "& svg": {
@@ -40,7 +36,7 @@ const ListItemIcon = styled(MuiListItemIcon)(() => ({
     minWidth: "2rem",
 
     "& svg": {
-        fontSize: "1.5rem",
+        fontSize: "1.1275rem",
     },
 }));
 

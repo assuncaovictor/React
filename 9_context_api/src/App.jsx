@@ -2,7 +2,7 @@ import { BrowserRouter } from "react-router-dom";
 import Routes from "./config/router/Routes";
 import Body from "./components/Body";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
-import { ConterContextProvider } from "./context/CounterContext";
+import { CounterContextProvider } from "./context/CounterContext";
 import { TileColorContextProvider } from "./context/TitleColorContext";
 
 const App = () => {
@@ -10,7 +10,7 @@ const App = () => {
 
     return (
         <QueryClientProvider client={queryClient}>
-            <ConterContextProvider>
+            <CounterContextProvider>
                 <TileColorContextProvider>
                     <BrowserRouter>
                         <Body>
@@ -18,7 +18,7 @@ const App = () => {
                         </Body>
                     </BrowserRouter>
                 </TileColorContextProvider>
-            </ConterContextProvider>
+            </CounterContextProvider>
         </QueryClientProvider>
     );
 };

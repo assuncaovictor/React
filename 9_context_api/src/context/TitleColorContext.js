@@ -17,9 +17,6 @@ const titleColorReducer = (state, action) => {
 
 const TileColorContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(titleColorReducer, { color: "purple" });
-
-    console.log("Title ", state);
-
     return <TitleColorContext.Provider value={{ ...state, dispatch }}> {children}</TitleColorContext.Provider>;
 };
 
