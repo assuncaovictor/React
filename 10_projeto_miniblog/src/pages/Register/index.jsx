@@ -5,6 +5,27 @@ import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 
 const Register = () => {
+    const [name, setName] = React.useState("");
+    const [email, setEmail] = React.useState("");
+    const [password, setPassword] = React.useState("");
+    const [confirmPassword, setConfirmPassword] = React.useState("");
+
+    const handleChangeName = (event) => {
+        setName(event.target.value);
+    };
+
+    const handleChangeEmail = (event) => {
+        setEmail(event.target.value);
+    };
+
+    const handleChangePassword = (event) => {
+        setPassword(event.target.value);
+    };
+
+    const handleChangeConfirmPassword = (event) => {
+        setConfirmPassword(event.target.value);
+    };
+
     const handleSubmit = (event) => {
         event.preventDefault();
     };
@@ -28,6 +49,9 @@ const Register = () => {
                     variant="filled"
                     autoComplete="name"
                     type="text"
+                    value={name}
+                    onChange={handleChangeName}
+                    min={6}
                     required
                 />
                 <TextField
@@ -38,6 +62,8 @@ const Register = () => {
                     variant="filled"
                     autoComplete="email"
                     type="email"
+                    value={email}
+                    onChange={handleChangeEmail}
                     required
                 />
                 <TextField
@@ -48,6 +74,8 @@ const Register = () => {
                     variant="filled"
                     autoComplete="new-password"
                     type="password"
+                    value={password}
+                    onChange={handleChangePassword}
                     required
                 />
                 <TextField
@@ -58,6 +86,8 @@ const Register = () => {
                     variant="filled"
                     autoComplete="new-password"
                     type="password"
+                    value={confirmPassword}
+                    onChange={handleChangeConfirmPassword}
                     required
                 />
 
