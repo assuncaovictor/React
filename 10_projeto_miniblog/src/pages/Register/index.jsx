@@ -34,10 +34,10 @@ const Register = () => {
     const validationSchema = Yup.object().shape({
         email: Yup.string().email("Insira um e-mail válido").required("E-mail é um campo obrigatório"),
         name: Yup.string().min(3, "O nome deve ter no mínimo 3 caracteres").required("Nome é um campo obrigatório"),
-        // password: Yup.string().min(6, "Insira uma senha com 6 caracteres mínimo").required("Insira uma senha"),
-        // passwordConfirmation: Yup.string()
-        //     .required("Campo obrigatório")
-        //     .oneOf([Yup.ref("password"), null], "As senhas informadas não são iguais!"),
+        password: Yup.string().min(6, "Insira uma senha com 6 caracteres mínimo").required("Insira uma senha"),
+        passwordConfirmation: Yup.string()
+            .required("Campo obrigatório")
+            .oneOf([Yup.ref("password"), null], "As senhas informadas não são iguais!"),
     });
 
     return (
