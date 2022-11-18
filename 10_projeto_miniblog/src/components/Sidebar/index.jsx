@@ -2,7 +2,7 @@ import { List, ListItemButton, ListItemIcon, ListItemText, ListItem, Drawer } fr
 import React from "react";
 import { sidebar } from "../../config/router/navigate";
 import { NavLink } from "react-router-dom";
-import { usePageStyleContext } from "../../hooks/context";
+import { usePageStyleContext } from "../../hooks/usePageStyleContext";
 
 const Sidebar = () => {
     const { drawerWidth, openDrawer, hasDrawer } = usePageStyleContext();

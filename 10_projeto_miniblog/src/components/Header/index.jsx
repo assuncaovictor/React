@@ -12,7 +12,7 @@ import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import SearchIcon from "@mui/icons-material/Search";
 import { Search, SearchIconWrapper, StyledInputBase } from "./style";
 import Navbar from "./Navbar";
-import { usePageStyleContext } from "../../hooks/context";
+import { usePageStyleContext } from "../../hooks/usePageStyleContext";
 import { Link as RouterLink } from "react-router-dom";
 
 const Header = () => {

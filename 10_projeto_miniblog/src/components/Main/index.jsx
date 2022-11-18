@@ -1,5 +1,5 @@
 import React from "react";
-import { usePageStyleContext } from "../../hooks/context";
+import { usePageStyleContext } from "../../hooks/usePageStyleContext";
 import { Container, Box } from "./style";
 
 const Main = ({ children }) => {
