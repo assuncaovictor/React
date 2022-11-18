@@ -2,7 +2,7 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, up
 import { useState } from "react";
 
 const useAuthentication = () => {
-    const [error, setError] = useState("");
+    const [authError, setAuthError] = useState("");
 
     const auth = getAuth();
 
@@ -14,14 +14,14 @@ const useAuthentication = () => {
                 displayName: name,
             });
         } catch (e) {
-            setError(e.messager);
+            setAuthError(e.message);
         }
     };
 
     return {
         auth,
         createUser,
-        error,
+        authError,
     };
 };
 

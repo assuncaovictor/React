@@ -13,13 +13,14 @@ import { useToastContext } from "../../hooks/useToast";
 const Register = () => {
     const { addToast } = useToastContext();
 
-    const { auth, createUser, error: authError } = useAuthentication();
+    const { auth, createUser, authError } = useAuthentication();
 
     const handleSubmit = async ({ name, email, password }) => {
         await createUser({ name, email, password });
+        console.log(authError);
 
         if (authError) {
-            addToast(authError, "error");
+            addToast("Algo deu errado na criação do usuário", "error");
         }
     };
 
@@ -33,10 +34,10 @@ const Register = () => {
     const validationSchema = Yup.object().shape({
         email: Yup.string().email("Insira um e-mail válido").required("E-mail é um campo obrigatório"),
         name: Yup.string().min(3, "O nome deve ter no mínimo 3 caracteres").required("Nome é um campo obrigatório"),
-        password: Yup.string().min(6, "Insira uma senha com 6 caracteres mínimo").required("Insira uma senha"),
-        passwordConfirmation: Yup.string()
-            .required("Campo obrigatório")
-            .oneOf([Yup.ref("password"), null], "As senhas informadas não são iguais!"),
+        // password: Yup.string().min(6, "Insira uma senha com 6 caracteres mínimo").required("Insira uma senha"),
+        // passwordConfirmation: Yup.string()
+        //     .required("Campo obrigatório")
+        //     .oneOf([Yup.ref("password"), null], "As senhas informadas não são iguais!"),
     });
 
     return (
@@ -78,6 +79,7 @@ const Register = () => {
                                 value={values.name}
                                 error={touched.name && Boolean(errors.name)}
                                 helperText={touched.name && errors.name ? errors.name : undefined}
+                                required
                             />
                             <TextField
                                 name="email"
@@ -92,6 +94,7 @@ const Register = () => {
                                 onChange={handleChange}
                                 error={touched.email && Boolean(errors.email)}
                                 helperText={touched.email && errors.email ? errors.email : undefined}
+                                required
                             />
 
                             <TextField
