@@ -18,10 +18,15 @@ const useAuthentication = () => {
         }
     };
 
+    const logout = async () => {
+        await signOut(auth);
+    };
+
     return {
         auth,
         createUser,
         authError,
+        logout,
     };
 };
 

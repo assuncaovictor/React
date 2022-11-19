@@ -2,8 +2,10 @@ import About from "../../../pages/About";
 import Home from "../../../pages/Home";
 import Register from "../../../pages/Register";
 import Login from "../../../pages/Login";
+import Dashboard from "../../../pages/Dashboard";
+import CreatePost from "../../../pages/CreatePost";
 
-const routes = [
+const basicRoutes = [
     {
         path: "/home",
         element: <Home />,
@@ -12,7 +14,20 @@ const routes = [
         path: "/about",
         element: <About />,
     },
+];
 
+const authRoutes = [
+    {
+        path: "/dashboard",
+        element: <Dashboard />,
+    },
+    {
+        path: "/post/create",
+        element: <CreatePost />,
+    },
+];
+
+const notAuthRoutes = [
     {
         path: "/register",
         element: <Register />,
@@ -25,4 +40,4 @@ const routes = [
     },
 ];
 
-export default routes;
+export { basicRoutes, authRoutes, notAuthRoutes };

@@ -1,9 +1,9 @@
 import { onAuthStateChanged } from "firebase/auth";
 import { BrowserRouter } from "react-router-dom";
 import Routes from "./config/router/Routes";
-import Body from "./components/Body";
-import Backdrop from "@mui/material/Backdrop";
-import CircularProgress from "@mui/material/CircularProgress";
+// import Body from "./components/Body";
+// import Backdrop from "@mui/material/Backdrop";
+// import CircularProgress from "@mui/material/CircularProgress";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { PageStyleContextProvider } from "./context/PageStyleContext";
 import { ToastContextProvider } from "./context/ToastContext";
@@ -22,13 +22,13 @@ const App = () => {
         });
     }, [auth]);
 
-    if (!user) {
-        return (
-            <Backdrop sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }} open>
-                <CircularProgress color="inherit" />
-            </Backdrop>
-        );
-    }
+    // if (!user) {
+    //     return (
+    //         <Backdrop sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }} open>
+    //             <CircularProgress color="inherit" />
+    //         </Backdrop>
+    //     );
+    // }
 
     const queryClient = new QueryClient();
 
