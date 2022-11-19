@@ -1,9 +1,9 @@
 import React from "react";
-import { usePageStyleContext } from "../../hooks/usePageStyleContext";
+import { usePageStyle } from "../../hooks/usePageStyle";
 import { Container, Box } from "./style";
 
 const Main = ({ children }) => {
-    const { drawerWidth, openDrawer, hasDrawer } = usePageStyleContext();
+    const { drawerWidth, openDrawer, hasDrawer } = usePageStyle();
 
     return (
         <Container

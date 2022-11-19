@@ -1,7 +1,7 @@
 import { PageStyleContext } from "../context/PageStyleContext";
 import { useContext } from "react";
 
-const usePageStyleContext = () => {
+const usePageStyle = () => {
     const context = useContext(PageStyleContext);
 
     if (!context) {
@@ -11,4 +11,4 @@ const usePageStyleContext = () => {
     return context;
 };
 
-export { usePageStyleContext };
+export { usePageStyle };

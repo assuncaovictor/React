@@ -4,7 +4,15 @@ import Header from "../Header";
 import Sidebar from "../Sidebar";
 import Content from "../Main";
 
-const Body = ({ children }) => {
+import { usePageStyle } from "../../hooks/usePageStyle";
+
+const Body = ({ children, hasDrawer = true }) => {
+    const { setHasDrawer } = usePageStyle();
+
+    React.useEffect(() => {
+        setHasDrawer(hasDrawer);
+    }, [setHasDrawer, hasDrawer]);
+
     return (
         <Container direction="row" alignItems="flex-start">
             <Header />

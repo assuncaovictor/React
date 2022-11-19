@@ -38,9 +38,7 @@ const App = () => {
                 <BrowserRouter>
                     <ToastContextProvider>
                         <PageStyleContextProvider>
-                            <Body>
-                                <Routes />
-                            </Body>
+                            <Routes />
                         </PageStyleContextProvider>
                         <Toast />
                     </ToastContextProvider>

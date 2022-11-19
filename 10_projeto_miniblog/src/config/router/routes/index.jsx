@@ -16,10 +16,12 @@ const routes = [
     {
         path: "/register",
         element: <Register />,
+        hasDrawer: false,
     },
     {
         path: "/login",
         element: <Login />,
+        hasDrawer: false,
     },
 ];
 

@@ -12,11 +12,11 @@ import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import SearchIcon from "@mui/icons-material/Search";
 import { Search, SearchIconWrapper, StyledInputBase } from "./style";
 import Navbar from "./Navbar";
-import { usePageStyleContext } from "../../hooks/usePageStyleContext";
+import { usePageStyle } from "../../hooks/usePageStyle";
 import { Link as RouterLink } from "react-router-dom";
 
 const Header = () => {
-    const { hasDrawer, openDrawer, setOpenDrawer, drawerWidth } = usePageStyleContext();
+    const { hasDrawer, openDrawer, setOpenDrawer, drawerWidth } = usePageStyle();
 
     const handleSubmit = (event) => {
         event.preventDefault();
