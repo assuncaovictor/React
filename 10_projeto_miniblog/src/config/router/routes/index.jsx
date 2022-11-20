@@ -1,9 +1,11 @@
 import About from "../../../pages/About";
 import Home from "../../../pages/Home";
-import Register from "../../../pages/Register";
-import Login from "../../../pages/Login";
+
 import Dashboard from "../../../pages/Dashboard";
 import CreatePost from "../../../pages/CreatePost";
+
+import Register from "../../../pages/Authentication/Register";
+import Login from "../../../pages/Authentication/Login";
 
 const basicRoutes = [
     {
@@ -31,12 +33,10 @@ const notAuthRoutes = [
     {
         path: "/register",
         element: <Register />,
-        hasDrawer: false,
     },
     {
         path: "/login",
         element: <Login />,
-        hasDrawer: false,
     },
 ];
 

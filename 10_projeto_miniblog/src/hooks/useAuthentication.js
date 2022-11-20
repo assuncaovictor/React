@@ -22,11 +22,20 @@ const useAuthentication = () => {
         await signOut(auth);
     };
 
+    const login = async ({ email, password }) => {
+        try {
+            await signInWithEmailAndPassword(auth, email, password);
+        } catch (e) {
+            setAuthError("E-mail ou senha inválidos");
+        }
+    };
+
     return {
         auth,
         createUser,
         authError,
         logout,
+        login,
     };
 };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { FormControl, TextField, Container } from "./style";
+import { FormControl, TextField, Container } from "../style";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
@@ -7,8 +7,8 @@ import CircularProgress from "@mui/material/CircularProgress";
 
 import { Formik } from "formik";
 import * as Yup from "yup";
-import useAuthentication from "../../hooks/useAuthentication";
-import { useToastContext } from "../../hooks/useToast";
+import useAuthentication from "../../../hooks/useAuthentication";
+import { useToastContext } from "../../../hooks/useToast";
 
 const Register = () => {
     const { addToast } = useToastContext();
@@ -17,11 +17,12 @@ const Register = () => {
 
     const handleSubmit = async ({ name, email, password }) => {
         await createUser({ name, email, password });
-        console.log(authError);
 
         if (authError) {
-            addToast("Algo deu errado na criação do usuário", "error");
+            return addToast("Algo deu errado na criação do usuário", "error");
         }
+
+        addToast("Usuário criado com sucesso.", "success");
     };
 
     const initialValues = {
@@ -130,7 +131,7 @@ const Register = () => {
                             />
 
                             <Button type="submit" variant="contained" disabled={isSubmitting}>
-                                {isSubmitting ? <CircularProgress size={20} /> : "Enviar"}
+                                {isSubmitting ? <CircularProgress size={20} /> : "Cadastrar"}
                             </Button>
                         </FormControl>
                     </Stack>
