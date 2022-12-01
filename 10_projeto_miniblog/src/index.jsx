@@ -1,15 +1,16 @@
-import { db } from "./firebase/config";
+import fireabse from "./firebase/config";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+console.log("fireabse.toJSON()", fireabse.toJSON()); // ver dados do firebase
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
         <App />
-        
     </React.StrictMode>
 );
 

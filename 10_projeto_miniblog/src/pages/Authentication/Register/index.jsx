@@ -13,7 +13,7 @@ import { useToastContext } from "../../../hooks/useToast";
 const Register = () => {
     const { addToast } = useToastContext();
 
-    const { auth, createUser, authError } = useAuthentication();
+    const {  createUser, authError } = useAuthentication();
 
     const handleSubmit = async ({ name, email, password }) => {
         await createUser({ name, email, password });
